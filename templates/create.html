@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Создать пост {% endblock %}
+
+
+{% block body %}
+    <h1> Создать пост </h1>
+    <hr width="400px" color="black" align="left" size="3">
+
+    <form method="POST">
+        <div>
+            <p><b>Заголовок</b></p>
+            <input type="text" name="title">
+        </div>
+        <div>
+            <p><b>Текст</b></p>
+            <textarea name="text" style="resize: none;" rows="10"></textarea>
+        </div>
+        <p>
+            <input type="submit" value="Создать">
+        </p>
+    </form>
+
+{% endblock %}

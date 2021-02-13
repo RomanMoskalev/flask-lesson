@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Посты {% endblock %}
+
+
+{% block body %}
+
+    <div class="post" style="max-width: 420px;">
+        <h1>Посты на сайте</h1>
+        <hr width="400px" color="black" align="left" size="3">
+
+        {% for post in posts %}
+            <div class="alert alert-info">
+                <!--Заголовок поста-->
+                <h3> {{ post.title }} </h3>
+                <!--Текст поста-->
+                <p> {{ post.text }} </p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
